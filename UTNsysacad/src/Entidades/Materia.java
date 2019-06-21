@@ -4,7 +4,10 @@ public class Materia {
 	
 	@Override
 	public String toString() {
-		return "Materia: " + idMateria + " - " + nombre + ".";
+		if(idMateria>9)
+		{return idMateria + " - " + nombre + ".";}
+		else
+		{return idMateria + "  - " + nombre + ".";}
 	}
 	int idMateria;
 	String nombre;

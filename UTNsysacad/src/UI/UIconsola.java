@@ -7,7 +7,7 @@ import Data.*;
 import Entidades.*;
 
 
-public class UIdesktop {
+public class UIconsola {
 
 	public static void main(String[] args) {
 		
@@ -19,6 +19,7 @@ public class UIdesktop {
 		//DA.addAlumno("test","tes","1","455557","test@gmail.com","test123","test",123);
 		//DA.delete("1");
 		
+		System.out.println("ALUMNOS");
 		ArrayList<Alumno> alumnos =DA.getAll(); 
 		for (Alumno A:alumnos) 
 		{
@@ -27,14 +28,22 @@ public class UIdesktop {
 		}
 		
 		
-		
+		System.out.println("DIRECCIONES");
 		DataDireccion DD = new DataDireccion();
 		ArrayList<Direccion> direcciones =DD.getAll(); 
 		for (Direccion D:direcciones) 
 		{
 			System.out.println(D.toString());
 		}
+		System.out.println("");
 		
+		System.out.println("MATERIAS");
+		DataMateria DM = new DataMateria();
+		ArrayList<Materia> Materias =DM.getAll(); 
+		for (Materia M:Materias) 
+		{
+			System.out.println(M.toString());
+		}
 		/*Scanner s= new Scanner(System.in);
 		Alumno A2 = new Alumno();
 		System.out.println("Ingrese nombre:");
