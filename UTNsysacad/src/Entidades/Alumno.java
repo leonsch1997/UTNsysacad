@@ -7,10 +7,13 @@ public class Alumno extends Persona {
 	
 	@Override
 	public String toString() {
-		/*return "legajo=" + legajo + ", Nombre=" + getNombre()
-				+ ", Apelldo=" + getApellido() + ", Email=" + getEmail() + ", Contraseña="
-				+ getContraseña() + ", Telefono=" + getTelefono() + ", Direccion, " + getDireccion().toString()+".";*/
-		return "Alumno:"+ getNombre()+", "+getApellido()+".";
+		return "Alumno: "+ getNombre()+", "+getApellido() +
+			   "\n Legajo: "+ getLegajo() +
+			   "\n E-mail: "+ getEmail() +
+			   "\n Telefono: "+ getTelefono() +
+			   "\n Contraseña: "+ getContraseña() +
+			   "\n Direccion: "+ getDireccion().toString();
+			   
 	}
 
 	public Alumno()

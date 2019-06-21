@@ -43,6 +43,7 @@ public class Connection {
 			if(rs!=null){rs.close();}
 			if(stmt!=null){stmt.close();}*/
 			
+
 			
 			//Nuevo alumno
 			Scanner s= new Scanner(System.in);
@@ -67,8 +68,7 @@ public class Connection {
 			D.setNumero(s.nextInt());
 			
 			//Crear nueva Direccion
-			PreparedStatement pstmt=conn.prepareStatement("insert into Direcciones(calle,numero) values(?,?)"
-					,PreparedStatement.RETURN_GENERATED_KEYS);
+			PreparedStatement pstmt=conn.prepareStatement("insert into Direcciones(calle,numero) values(?,?)",PreparedStatement.RETURN_GENERATED_KEYS);
 			
 			pstmt.setString(1, D.getCalle());
 			pstmt.setInt(2, D.getNumero());

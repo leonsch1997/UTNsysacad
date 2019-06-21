@@ -10,7 +10,12 @@ public class Direccion {
 	
 	@Override
 	public String toString() {
-		return "Calle:" + calle + ", Numero:" + numero + ", Piso:" + piso + ", depto:" + dept + ".";
+		
+		if(dept == null || piso == 0)
+		{return  idDireccion+": "+ calle + " " + numero;}
+		else
+		{return  idDireccion+": "+calle + " " + numero + ", Depratamento: " + piso + dept;}
+		
 	}
 
 	public Direccion() {}	
